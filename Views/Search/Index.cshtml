@@ -1,0 +1,51 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@using RelatudeFishingShop.Models.ViewModels
+@inject WAF.API.Web.WAFNativeContext ctx
+@model SearchViewModel
+
+    <div class="search-page-container">
+        @if (Model.Page != null)
+        {
+            <h1 @Html.Raw(WAFAttribute.NameAndValue("Name", Model.Page.ContentParentPath))>@Model.Page.Name</h1>
+            if (!string.IsNullOrEmpty(Model.Page.BodyContent))
+            {
+                <div class="text" @Html.Raw(WAFAttribute.NameAndValue("BodyContent", Model.Page.ContentParentPath))>
+                    @Html.Raw(Model.Page.BodyContent)
+                </div>
+            }
+
+        }
+    <div class="search-container">
+        @if (Model.Result.Count > 0)
+        {
+            <div class="result-container">
+                @foreach (var result in Model.Result)
+                {
+                    <a class="result" href="@ctx.GetUrl(result)">
+                        <h4>@result.Name</h4>
+                        @if (result is Article)
+                        {
+                            var article = result as Article;
+                            <div>@Html.Raw(article.BodyContent)</div>
+                        }
+                        else if (result is Product)
+                        {
+                            var product = result as Product;
+                            <div>@product.ShortDescription</div>
+                        }
+                    </a>
+                }
+            </div>
+            <div class="result-counter">
+                <a class="button @(Model.ShowPrev ? "" : "disabled")" href="@Model.PrevUrl">Prev</a>
+                <div class="number">@Model.CurrentPage of @Model.PageTotal</div>
+                <a class="button @(Model.ShowNext ? "" : "disabled")" href="@Model.NextUrl">Next</a>
+            </div>
+        }
+        else
+        {
+            <div class="result">There are no results</div>
+        }
+    </div>
+    </div>

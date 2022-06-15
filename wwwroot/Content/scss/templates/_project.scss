@@ -1,0 +1,202 @@
+﻿.project-page {
+    .modal-container {
+        display: none;
+    }
+
+    .project-header {
+        display: flex;
+        border-bottom: 2px solid lightgray;
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+
+        img {
+            margin-left: 3em;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            flex-direction: column-reverse;
+
+            img {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .project-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        .project-image {
+            width: calc(25% - 30px);
+            margin-bottom: 61px;
+            margin-right: 15px;
+            margin-left: 15px;
+            position: relative;
+
+            @media only screen and (max-width: 1200px) {
+                width: calc(33.33% - 30px);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            .show-project-products {
+                width: 40px;
+                opacity: 0.7;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 20px;
+                display: none;
+
+                &.click {
+                    display: block;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                @media only screen and (max-width: 1000px) {
+                    display: block !important;
+                    font-size: 30px;
+                    margin: 15px;
+
+                    &.click {
+                        display: none !important;
+                    }
+
+                    @media only screen and (max-width: 600px) {
+                        font-size: 20px;
+                        margin: 10px;
+                    }
+                }
+            }
+
+            .products-container {
+                display: none;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                background-color: rgba(128, 128, 128, 0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+
+                i {
+                    position: absolute;
+                    color: white;
+                    padding: 1em;
+                }
+
+                .products {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    width: 100%;
+
+                    .product a {
+                        text-decoration: none;
+                        display: flex;
+                        margin-top: 10px;
+                        margin-left: 10px;
+
+                        img {
+                            height: 70px;
+                            width: 70px;
+                        }
+
+                        .name {
+                            color: white;
+                            margin-left: 10px;
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            margin-left: -5px;
+            margin-right: -5px;
+
+            .project-image {
+                width: calc(33.33% - 10px);
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/* MODAL */
+.project-image-modal {
+    max-height: 81vh;
+    max-width: 80vw;
+
+    .next-lightbox, .prev-lightbox, .close-lightbox {
+        font-size: 30px;
+        position: absolute;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    .close-lightbox {
+        right: 10px;
+        top: 10px;
+    }
+
+    .next-lightbox {
+        right: 10px;
+        top: 50%;
+    }
+
+    .prev-lightbox {
+        left: 10px;
+        top: 50%;
+    }
+
+
+    > img {
+        max-height: 60vh;
+        object-fit: contain;
+        width: 100%;
+
+        &.no-products {
+            max-height: 81vh;
+        }
+    }
+
+    .products {
+        margin-top: 1vh;
+        max-height: 20vh;
+        //background-color: rgba(128, 128, 128, 0.5);
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+
+        .product {
+            margin: 2vh;
+            display: block;
+
+            img {
+                display: block;
+                width: 16vh;
+                height: 16vh;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+﻿@using RelatudeFishingShop.Helpers
+@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@using WAF.Presentation.Web
+@using WAF.Common
+@using RelatudeFishingShop.Models.ViewModels
+@inject WAF.API.Web.WAFNativeContext ctx
+@model Order
+
+@{ 
+    var cp = ctx.Session.GetContent<ControlPanel>();
+}
+
+    <div class="order">
+        @if (Model != null && Model.GetNumberOfItemsInCart() > 0)
+        {
+            <div class="order-items">
+                @foreach (RelatudeFishingShopOrderItem orderItem in Model.OrderItems.Get())
+                {
+                    var product = orderItem.Product.Get();
+                    <div class="order-item">
+                        <a href="@ctx.GetUrl(product)">
+                            <img src="@product.MainProductImage.GetUrl(200, 200)" />
+                        </a>
+                        <div class="description">
+                            <h4><a href="@ctx.GetUrl(product)">@product.Name</a></h4>
+                            @if (orderItem.CustomeOptions.Count > 0)
+                            {
+                                foreach (var option in orderItem.CustomeOptions.GetAll())
+                                {
+                                    <div>
+                                        <span>@option.CategoryName: </span>
+                                        <span>@option.SelectedOptionName</span>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="short-description">@product.ShortDescription</div>
+                            }
+                        </div>
+                        <div class="info">
+                            <div class="unit-price">
+                                @(orderItem.GetItemUnitPriceIncVat(false, ctx.Session).ToString("N0") + ",- /unit")
+                            </div>
+
+                            <div class="qt">
+                                <input type="hidden" class="order-item-id" value="@orderItem.NodeId" />
+                                <button type="button" class="qt-button subtract update">-</button>
+                                <input class="qt-number" value="@orderItem.Quantity" />
+                                <button class="qt-button add update">+</button>
+                            </div>
+                            <button class="delete-button">SLETT</button>
+                            <div class="price">
+                                <span class="price-value">@orderItem.GetItemTotalPriceIncVat(false,ctx.Session).ToString("N0")</span>
+                                <span> ,-</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="checkout">
+                <div class="total-cart-price">
+                    <span>Total: </span>
+                    <span class="price-value">@Model.GetCurrentCartPriceIncVat().ToString("N0")</span>
+                    <span> ,-</span>
+                </div>
+                @if (cp.CheckoutPage.IsSet())
+                {
+                    var checkoutPage = cp.CheckoutPage.Get();
+                    <a class="link-button button" href="@ctx.GetUrl(checkoutPage)">@checkoutPage.Name</a>
+                }
+            </div>
+        }
+        else
+        {
+            <div>Handlekurven er tom</div>
+        }
+    </div>
+
+@section Scripts {
+    <script src="~/Content/js/shopHelper.js?v=020320202"></script>
+}

@@ -1,0 +1,132 @@
+﻿@using RelatudeFishingShop.Helpers
+@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@using WAF.Presentation.Web
+@using WAF.Common
+@using RelatudeFishingShop.Models.ViewModels
+@inject WAF.API.Web.WAFNativeContext ctx
+@model  CheckoutViewModel
+
+@{ 
+    var sign = WAFShopHelper.GetCurrentCurrency(ctx.Session).Sign;
+}
+
+    <div class="checkout-page">
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="error">@Model.Message</div>
+        }
+
+        @if (Model.Order != null)
+        {
+            <h1>@Model.Page.Name</h1>
+            <div class="content">@Html.Raw(Model.Page.BodyContent)</div>
+            <div class="order-container">
+                <div class="form-container">
+                    @using (Html.BeginForm("Checkout", "ShoppingCart", FormMethod.Post))
+                    {
+                        <div class="info-container">
+                            <div class="input-container">
+                                <label>Name</label>
+                                @Html.TextBoxFor(m => m.Name, new { required = "required" })
+                            </div>
+                            <div class="input-container">
+                                <label>Email</label>
+                                @Html.TextBoxFor(m => m.Email, new { required = "required" })
+                            </div>
+                            <div class="input-container">
+                                <label>Phone</label>
+                                @Html.TextBoxFor(m => m.Phone, new { required = "required" })
+                            </div>
+                            <div class="input-container">
+                                <label>Address</label>
+                                @Html.TextBoxFor(m => m.Address)
+                            </div>
+                            <div class="input-container">
+                                <label>City</label>
+                                @Html.TextBoxFor(m => m.City)
+                            </div>
+                            <div class="input-container">
+                                <label>Zip Code</label>
+                                @Html.TextBoxFor(m => m.ZipCode)
+                            </div>
+                            <div class="input-container">
+                                <label>Country</label>
+                                @Html.TextBoxFor(m => m.Country)
+                            </div>
+                            <div class="input-container comment">
+                                <label>Comment</label>
+                                @Html.TextAreaFor(m => m.Comment, new { @rows = 4 })
+                            </div>
+                        </div>
+                        <div class="shipping-container">
+                            <h4>Shipping methods</h4>
+                            @foreach (var shippingMethod in Model.ShippingMethods)
+                            {
+                                <div class="shipping">
+                                    <input type="radio" name="shipping" value="@shippingMethod.Item1" data-price="@shippingMethod.Item3" @(shippingMethod.Item4 ? "checked" : "") />
+                                    <span class="name">@shippingMethod.Item2</span>
+                                    <span class="price">@shippingMethod.Item3.ToString("N0"),-</span>
+                                </div>
+                            }
+                        </div>
+                        <div class="payment-container">
+                            <h4>Payment methods</h4>
+                            @foreach (var paymentMethod in Model.PaymentMethods)
+                            {
+                                <div class="payment">
+                                    <input type="radio" name="payment" value="@paymentMethod.Item1" @(paymentMethod.Item3 ? "checked" : "") />
+                                    <span class="name">@paymentMethod.Item2</span>
+                                </div>
+                            }
+                        </div>
+                        <button type="submit">ORDER</button>
+                    }
+                </div>
+                <div class="checkout-order">
+                    <div class="order-items">
+                        @foreach (RelatudeFishingShopOrderItem orderItem in Model.Order.OrderItems.Get())
+                        {
+                            var product = orderItem.Product.Get();
+                            <div class="order-item">
+                                <img src="@product.MainProductImage.GetUrl(100, 100)" />
+                                <div class="description">
+                                    <h3>@product.Name</h3>
+                                    @if (orderItem.CustomeOptions.Count > 0)
+                                    {
+                                        <div class="custome-options">
+                                            @foreach (var option in orderItem.CustomeOptions.GetAll())
+                                            {
+                                                <div class="option"><span>@option.CategoryName: </span><span>@option.SelectedOptionName</span></div>
+                                            }
+                                        </div>
+                                    }
+                                    <div class="info">
+                                        <div class="unit-price">
+                                            @(orderItem.GetItemUnitPriceIncVat(false, WAFContext.Session).ToString("N0") + " ,- /stk ")
+                                        </div>
+                                        <div class="qt-static">Qty: @orderItem.Quantity</div>
+                                        <div class="price">
+                                            <span class="price-value">@orderItem.GetItemTotalPriceIncVat(false,ctx.Session).ToString("N0")</span>
+                                            <span> ,-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="checkout">
+                        <div class="total-cart-price">
+                            <span>Totalt: </span>
+                            <span class="price-value" data-price="@Model.Order.GetCurrentCartPriceIncVat()">@Model.Order.OrderTotal.ToString("N0")</span>
+                            <span> ,-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+@section Scripts {
+    <script src="~/Content/js/checkoutHelper.js"></script>
+}

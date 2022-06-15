@@ -1,0 +1,165 @@
+﻿.product-page {
+    display: flex;
+    flex-direction: column;
+
+    .product {
+        display: flex;
+
+        .info-container {
+            width: 50%;
+            margin-left: 2em;
+
+            .price {
+                width: 100%;
+                margin-bottom: 2em;
+                margin-top: 2em;
+                padding-bottom: 1em;
+                border-bottom: 1px solid lightgray;
+                font-size: 21px;
+                font-weight: 400;
+            }
+
+            .add-to-cart {
+                display: flex;
+                flex-direction: column;
+
+                .qt-container {
+                    display: flex;
+
+                    .qt-button {
+                        width: 20%;
+                    }
+
+                    input {
+                        width: 100%;
+                        min-width: 46px;
+                        margin-left: 1em;
+                        margin-right: 1em;
+                        color: gray;
+                        border: 1px solid #b7b7b7;
+                    }
+                }
+
+                .add-to-cart-button, .add-to-cart-button-custome {
+                    margin-top: 1em;
+                }
+            }
+
+            .producer {
+                margin-top: 1em;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+            // Product Package
+            .category {
+                margin-top: 1em;
+
+                .option-category {
+                    display: flex;
+                    margin-top: 0.3em;
+
+
+                    .selected-option {
+                        min-width: 150px;
+                        margin-right: 1em;
+
+                        .option-price.hidden {
+                            display: none;
+                        }
+                    }
+
+                    .options {
+                        display: flex;
+                        align-content: flex-start;
+                        flex-wrap: wrap;
+                        margin-left: -5px;
+                        margin-right: -5px;
+
+                        .option {
+                            width: 50px;
+                            height: 50px;
+                            margin-bottom: 1em;
+                            margin-right: 5px;
+                            margin-left: 5px;
+                            padding: 3px;
+
+                            &.selected {
+                                border: 2px solid gray;
+                                padding: 0;
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .category-name, .option-name, .option-price .value {
+                font-weight: 400;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            flex-direction: column;
+
+            .info-container {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .projects-container {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        border-top: 1px solid lightgray;
+
+        h3 {
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -20px;
+            margin-right: -20px;
+
+            > a {
+                width: calc(25% - 40px);
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                text-decoration: none;
+            }
+
+            .project {
+                img {
+                    width: 100%;
+                    height: unset;
+                }
+
+                .name {
+                    margin-top: 1em;
+                    text-align: center;
+                }
+            }
+
+            @media only screen and (max-width: 700px) {
+                margin-left: -5px;
+                margin-right: -5px;
+                font-size: 14px;
+
+                > a {
+                    width: calc(33.33% - 10px);
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

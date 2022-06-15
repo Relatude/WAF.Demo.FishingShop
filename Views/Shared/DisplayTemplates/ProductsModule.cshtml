@@ -1,0 +1,37 @@
+﻿@using RelatudeFishingShop.Helpers
+@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@using WAF.Presentation.Web
+@using WAF.Common
+@using RelatudeFishingShop.Models.ViewModels
+@inject WAF.API.Web.WAFNativeContext ctx
+@model ProductsModule
+
+@if (Model.Products.Count > 0)
+{
+    <section class="module products-module">
+        @if (!string.IsNullOrEmpty(Model.Header))
+        {
+            <h2>@Model.Header</h2>
+        }
+        <div class="products">
+            @foreach (var product in Model.Products.Get())
+            {
+                <div class="product">
+                    @if (product.MainProductImage.IsImage())
+                    {
+                        <a href="@WAFContext.GetUrl(product)">
+                            @Html.Raw(product.MainProductImage.GetImageHtml(500, 500))
+                            <div class="name" @Html.Raw(WAFAttribute.NameAndValue("Name", product.ContentParentPath))>@product.Name</div>
+                            <div class="description" @Html.Raw(WAFAttribute.NameAndValue("ShortDescription", product.ContentParentPath))>@product.ShortDescription</div>
+                            <div class="price">
+                                <h3 @Html.Raw(WAFAttribute.NameAndValue("PriceExVat", product.ContentParentPath))>@product.GetPriceIncVat().ToString("N0"),-</h3>
+                                <a class="button action-to-cart" data-id="@product.NodeId">BUY</a>
+                            </div>
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    </section>
+}

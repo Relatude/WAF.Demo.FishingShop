@@ -1,0 +1,27 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@model List<ModuleBase>
+
+@{
+    var hasImageModule = false;
+    foreach (var module in Model)
+    {
+        if (module is SliderModule)
+        {
+            hasImageModule = true;
+            break;
+        }
+    }
+}
+
+@Html.DisplayFor(m => Model)
+
+@if (hasImageModule)
+{
+    @section Header {
+        <link rel="stylesheet" href="~/Assets/fotorama/fotorama.css">
+    }
+
+    @section Scripts {
+        <script src="~/Assets/fotorama/fotorama.js"></script>
+    }
+}

@@ -1,0 +1,25 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@model ArticleBase
+@inject WAF.API.Web.WAFNativeContext ctx
+@{ 
+    var frontPage = ctx.Session.GetSite().StartNode.Get();
+}
+
+<div class="article">
+    <div class="text">
+        <h1 @Html.Raw(WAFAttribute.NameAndValue("Name", Model.ContentParentPath)) >@Model.Name</h1>
+        <div class="ingress" @Html.Raw(WAFAttribute.NameAndValue("Ingress", Model.ContentParentPath)) >
+            @Model.Ingress
+        </div>
+        <div @Html.Raw(WAFAttribute.NameAndValue("BodyContent", Model.ContentParentPath))>
+            @Html.Raw(Model.BodyContent)
+        </div>
+    </div>
+    @if (Model.IngressImage.IsImage())
+    {
+        @Html.Raw(Model.IngressImage.GetImageHtml(600,400))
+    }
+    
+</div>       
+        

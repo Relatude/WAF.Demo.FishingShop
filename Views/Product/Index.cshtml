@@ -1,0 +1,56 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@model Product
+
+<div class="product-page">
+    <div class="product">
+        <div class="fotorama"
+             data-max-width="100%"
+             data-nav="thumbs"
+             data-navposition="bottom"
+             data-allowfullscreen="true">
+            @if (Model.MainProductImage.IsImage())
+            {
+                <img src="@Model.MainProductImage.GetUrl(750, 750)" />
+            }
+
+            @foreach (var image in Model.Files.GetAll())
+            {
+                if (image.File.IsImage())
+                {
+                    <img src="@image.File.GetUrl(750, 750)" />
+                }
+            }
+        </div>
+        <div class="info-container">
+            <h1 @Html.Raw(WAFAttribute.NameAndValue("Name", Model.ContentParentPath))>@Model.Name</h1>
+            <!-- If model has config features -->
+            <div @Html.Raw(WAFAttribute.NameAndValue("Description", Model.ContentParentPath))>@Html.Raw(Model.Description)</div>
+
+            @if (Model.Manufacturer.IsSet())
+            {
+                var manufacturer = Model.Manufacturer.Get();
+                <div>Produsent: <span @Html.Raw(WAFAttribute.NameAndValue("Name", manufacturer.ContentParentPath))>@manufacturer.Name</span></div>
+            }
+
+            <div class="price">@(Model.GetPriceIncVat().ToString("N0") + " ,-")</div>
+            <div class="add-to-cart">
+                <div class="qt-container">
+                    <button type="button" class="qt-button subtract">-</button>
+                    <input name="quantity" id="quantity" class="qt-number" value="1" />
+                    <button class="qt-button add">+</button>
+                </div>
+                <input type="hidden" class="product-id" value="@Model.NodeId" />
+                <button class="add-to-cart-button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Header {
+    <link href="~/Assets/fotorama/fotorama.css" rel="stylesheet" />
+}
+
+@section Scripts {
+    <script src="~/Content/js/shopHelper.js?v=030220202"></script>
+    <script src="~/Assets/fotorama/fotorama.js"></script>
+}

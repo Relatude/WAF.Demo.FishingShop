@@ -1,0 +1,35 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@inject WAF.API.Web.WAFNativeContext ctx
+@model ImageAndTextModule
+
+@{ 
+    var className = Model.ImagePosition.ToString().ToLower();
+}
+
+<section class="module image-and-text-module @className">
+    @if (Model.Image.IsImage())
+    {
+        <div class="image">
+            @Html.Raw(Model.Image.GetImageHtml(1500))
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(Model.Text))
+    {
+        <div class="text">
+            @if (!string.IsNullOrEmpty(Model.Header))
+            {
+                <h1 class="header" @Html.Raw(WAFAttribute.NameAndValue("Header", Model.ContentParentPath))>@Model.Header</h1>
+            }
+
+            <div @Html.Raw(WAFAttribute.NameAndValue("Text", Model.ContentParentPath))>
+                @Html.Raw(Model.Text)
+            </div>
+            
+            @if (Model.Link.LinkType != WAF.Engine.Property.LinkType.Empty)
+            {
+                <a class="button" href="@Model.Link.GetUrl()" @Html.Raw(WAFAttribute.NameAndValue("LinkText", Model.ContentParentPath))>@Model.LinkText</a>
+            }
+        </div>
+    }
+</section>

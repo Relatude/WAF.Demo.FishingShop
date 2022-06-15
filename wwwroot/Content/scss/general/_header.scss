@@ -1,0 +1,288 @@
+﻿header {
+    width: 100%;
+    max-width: 1500px;
+    position: relative;
+    min-height: 109px;
+
+    .header {
+        position: fixed;
+        width: inherit;
+        max-width: inherit;
+        min-height: 109px;
+        display: flex;
+        z-index: 3;
+        background-color: white;
+
+        .mobile {
+            display: none;
+        }
+
+        .logo {
+            padding-left: 10px;
+
+            @media only screen and (min-width: 1300px) {
+                padding-left: 3em;
+            }
+
+            @media only screen and (min-width: 1700px) {
+                padding-left: 0;
+            }
+
+            img {
+                width: unset;
+                height: unset;
+                max-width: 300px;
+            }
+        }
+
+        .links {
+            display: flex;
+            margin-left: auto;
+
+            a {
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        form {
+            margin: auto;
+
+            .search {
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                display: flex;
+                align-items: center;
+                background-color: #eff4fa;
+
+                button {
+                    background-color: unset;
+                    padding: unset;
+
+                    .icon {
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+                }
+
+
+                input {
+                    background-color: #eff4fa;
+                    border: none;
+                    border-radius: 0;
+                    font-size: 18px;
+                    padding-top: .7em;
+                    padding-bottom: .7em;
+                    width: 100%;
+                }
+            }
+        }
+
+        .shopping-cart {
+            padding: 36px;
+            justify-self: right;
+            color: #a0a0a0;
+            padding-right: 10px;
+
+            @media only screen and (min-width: 1300px) {
+                padding-right: 3em;
+            }
+
+            @media only screen and (min-width: 1700px) {
+                padding-right: 0;
+            }
+
+            img {
+                width: 30px;
+            }
+        }
+
+        .cart-size-counter {
+            font-family: proxima-nova, sans-serif;
+            font-size: 12px;
+            position: absolute;
+            margin-left: -19px;
+            margin-top: 4px;
+            color: #a0a0a0;
+            z-index: 2;
+
+            :hover {
+                color: #a0a0a0;
+            }
+        }
+
+        .header-hamburger {
+            padding: 36px;
+            align-self: center;
+            justify-self: left;
+            width: 30px;
+            cursor: pointer;
+            padding-left: 10px;
+
+            @media only screen and (min-width: 1300px) {
+                padding-left: 3em;
+            }
+
+            @media only screen and (min-width: 1700px) {
+                padding-left: 0;
+            }
+        }
+
+        > * {
+            grid-column-start: 1;
+            align-self: center;
+            grid-row-start: 1;
+        }
+    }
+
+    .hamburger-menu {
+        position: fixed;
+        display: none;
+        background-color: white;
+        opacity: 0.9;
+        z-index: 3;
+        height: 100%;
+        font-size: 14px;
+        min-width: 300px;
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+
+            .close-menu {
+                width: 20px;
+                padding: 36px;
+                cursor: pointer;
+            }
+
+            .links-container {
+                align-self: center;
+                width: 200px;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+
+                a {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: gray;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1300px) {
+        min-height: 80px;
+
+        .header {
+            min-height: 80px;
+
+            .logo {
+                img {
+                    max-width: 150px;
+                }
+            }
+
+            .shopping-cart {
+                padding-top: 23px;
+                padding-bottom: 23px;
+                padding-left: 23px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        min-height: 60px;
+
+        .header {
+            min-height: 60px;
+            display: grid;
+
+            .mobile {
+                display: block;
+            }
+
+            .not-mobile {
+                display: none;
+            }
+
+            .header-hamburger {
+                justify-self: left;
+                width: 20px;
+                padding: 23px;
+                padding-left: 10px;
+            }
+
+            .logo {
+                justify-self: center;
+            }
+
+            form {
+                grid-column-start: unset;
+                align-self: unset;
+                grid-row-start: unset;
+                margin: 0;
+                display: none;
+
+                .search {
+                    margin: 0;
+                }
+            }
+
+            .header-right {
+                justify-self: right;
+                display: flex;
+                align-items: center;
+                padding-right: 10px;
+
+                .shopping-cart {
+                    padding: 0;
+                    margin-left: 20px;
+                    height: 25px;
+
+                    img {
+                        width: 25px;
+                    }
+
+                    .cart-size-counter {
+                        margin-left: -16px;
+                        margin-top: 0;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .hamburger-menu {
+            min-width: unset;
+            width: 100%;
+
+            .links-container {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .header .logo img {
+            max-width: 150px;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .header .logo img { max-width: 120px; }
+    }
+}

@@ -1,0 +1,70 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@using WAF.Presentation.Web
+@inject WAF.API.Web.WAFNativeContext ctx
+@model ControlPanel
+
+<footer>
+    <div class="footer-container">
+        <div class="info-container">
+            @if (!string.IsNullOrEmpty(Model.FooterInfo))
+            {
+                <div class="footer-text" @Html.Raw(WAFAttribute.NameAndValue("FooterInfo", Model.ContentParentPath))>
+                    @Html.Raw(Model.FooterInfo)
+                </div>
+            }
+        </div>
+        <div class="links-container">
+            @if (Model.Footer.Count > 0)
+            {
+                foreach (var link in Model.Footer.GetAll())
+                {
+                    if (link.Node.IsSet())
+                    {
+                        var node = link.Node.Get();
+                        <a href="@WAFContext.GetUrl(node)" @Html.Raw(WAFAttribute.NameAndValue("Name", node.ContentParentPath))>@node.Name</a>
+                    }
+                    else
+                    {
+                        <div class="filler"></div>
+                    }
+                }
+            }
+        </div>
+        <div class="site-container">
+            <div class="copyright">© @DateTime.Now.Year Relatude Webnodes AS</div>
+            <a href="https://relatude.com/">Powered by Relatude E-Commerce</a>
+        </div>
+        <div class="logo-container">
+            @if (Model.FooterLogo.ContainsFile())
+            {
+                <a class="logo" href="https://relatude.com/">
+                    @Html.Raw(Model.FooterLogo.GetImageHtml(200))
+                </a>
+            }
+            <div class="filler"></div>
+            <div class="some-links">
+                @if (Model.Instagram.LinkType != WAF.Engine.Property.LinkType.Empty)
+                {
+                    <a @Html.Raw(WAFAttribute.NameAndValue("Instagram", Model.ContentParentPath)) href="@Model.Instagram.GetUrl()">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                }
+
+                @if (Model.Facebook.LinkType != WAF.Engine.Property.LinkType.Empty)
+                {
+                    <a @Html.Raw(WAFAttribute.NameAndValue("Facebook", Model.ContentParentPath)) href="@Model.Facebook.GetUrl()">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                }
+                @if (Model.Twitter.LinkType != WAF.Engine.Property.LinkType.Empty)
+                {
+                    <a href="@Model.Twitter.GetUrl()">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="margin"></div>
+</footer>

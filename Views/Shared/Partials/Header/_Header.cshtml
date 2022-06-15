@@ -1,0 +1,95 @@
+﻿@using RelatudeFishingShop.Helpers
+@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@using WAF.Presentation.Web
+@using WAF.Common
+@inject WAF.API.Web.WAFNativeContext ctx
+@model ControlPanel
+
+@{
+    var order = WAFShopHelper.GetCurrentOrder(this.Context,ctx.Session);
+}
+
+<header>
+    <div class="header">
+        <img class="header-hamburger mobile" src="~/Assets/Icons/thinHamburger.png" />
+        <a class="logo" href="@WAFContext.GetUrl(WAFContext.Session.GetSite().StartNode.GetId())">
+            @if (Model.HeaderLogo.ContainsFile())
+            {
+                <text>@Html.Raw(Model.HeaderLogo.GetImageHtml(300))</text>
+            }
+        </a>
+        @using (Html.BeginForm("Index", "Search", FormMethod.Post))
+        {
+            <div class="search">
+                <input type="text" placeholder="Search" name="query" id="query" />
+                <button type="submit">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.76 17.75">
+                        <title>Soek_ikon</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path id="Soek_ikon" class="cls-1" d="M15.56,16.15,13,12.76a7.45,7.45,0,0,0,2-4.28,7.56,7.56,0,0,0-15-1.84,7.55,7.55,0,0,0,6.58,8.42,7.25,7.25,0,0,0,.93,0A7.52,7.52,0,0,0,11.46,14L14,17.35a1,1,0,0,0,.81.4,1,1,0,0,0,.59-.2A1,1,0,0,0,15.56,16.15ZM6.88,13.07A5.56,5.56,0,0,1,2,6.88,5.57,5.57,0,0,1,7.55,2C7.78,2,8,2,8.23,2a5.56,5.56,0,0,1-1.35,11Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        }
+        <div class="links not-mobile">
+            @foreach (var link in Model.Header.GetAll())
+            {
+                if (link.Node.IsSet())
+                {
+                    var linkNode = link.Node.Get();
+                    <a href="@WAFContext.GetUrl(linkNode)" @Html.Raw(WAFAttribute.NameAndValue("Name", linkNode.ContentParentPath))>@linkNode.Name</a>
+                }
+            }
+        </div>
+        @if (Model.ShoppingCartPage.IsSet())
+        {
+            var numberOfItemsInCart = 0;
+            if (order != null) { numberOfItemsInCart = order.GetNumberOfItemsInCart(); }
+            <div class="header-right">
+                <div class="search-icon-mobile mobile">
+                    <svg class="icon mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.76 17.75">
+                        <title>Soek_ikon</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path id="Soek_ikon" class="cls-1" d="M15.56,16.15,13,12.76a7.45,7.45,0,0,0,2-4.28,7.56,7.56,0,0,0-15-1.84,7.55,7.55,0,0,0,6.58,8.42,7.25,7.25,0,0,0,.93,0A7.52,7.52,0,0,0,11.46,14L14,17.35a1,1,0,0,0,.81.4,1,1,0,0,0,.59-.2A1,1,0,0,0,15.56,16.15ZM6.88,13.07A5.56,5.56,0,0,1,2,6.88,5.57,5.57,0,0,1,7.55,2C7.78,2,8,2,8.23,2a5.56,5.56,0,0,1-1.35,11Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <a class="shopping-cart" href="@WAFContext.GetUrl(Model.ShoppingCartPage.GetId())">
+                    <img src="~/Assets/Icons/shoppingBag.png" />
+                    <span class="cart-size-counter">
+                        @if (numberOfItemsInCart > 0)
+                        {
+                            <span>@numberOfItemsInCart</span>
+                        }
+                        else
+                        {
+                            <span></span>
+                        }
+                    </span>
+                </a>
+            </div>
+        }
+    </div>
+    
+    <div class="hamburger-menu">
+        <div class="menu-container">
+            <img class="close-menu" src="~/Assets/Icons/thinCross.png" />
+            <div class="links-container">
+                @foreach (var link in Model.Header.GetAll())
+                {
+                    if (link.Node.IsSet())
+                    {
+                        var linkNode = link.Node.Get();
+                        <a href="@WAFContext.GetUrl(linkNode)" @Html.Raw(WAFAttribute.NameAndValue("Name", linkNode.ContentParentPath))>@linkNode.Name</a>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definition Name="Website" Build="12" Guid="6999d445-e4f6-4f36-b81c-a9c9df0a1558">
+  <Cultures>
+    <Culture LCID="1044" Name="Norsk" />
+  </Cultures>
+  <ContentClasses>
+    <ContentClass Guid="0c407e42-4721-4680-a902-3afc6a7af059" ClassName="FrontPage" Namespace="RelatudeFishingShop" TableName="front_page">
+      <Globalization>
+        <Lang LCID="1044" Name="Forside" />
+      </Globalization>
+      <Properties>
+        <Property Guid="ccc2df4f-4e0d-4283-8831-bd6d9e0b93b9" CodeName="Modules" PropertyClassGuid="c38c7283-5478-49be-be77-69bd5a7b99a6">
+          <Settings>
+            <RelationReference Key="Relation" Value="fb633cb0-0e21-4759-82fe-34187d0a1ffb" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANBSURBVChTjVJbTBRnGD3z/7uz0B12BXG57hYsuIRWsKgI1kvSlITUak28tKQPpjW24cGatAhV8UItNZEHojEaEoj2wcTEoKmVFVBjNMHVaIzYmBbjsMJyHVZ2h51d2eUyzj/oRhMfPMnJZL755nyX81FVVVEsX0jH1T9Kyv1+v8qxCAPp84jq718VzEW6jm1QQyE/gsr0BB1f218gpK+rnKQr0JElmcAyLu38mGdPRuLavYRPdjojD1sPzKndOvmNyuQZ96zJnSEnzOHrjY2N4DgODzdlHo7VvbxrMW+1Z0asjkWQeu7KX+y/M4/Fuc69RbyQlhWZNVDELduNj3JyceXIBqTkFOBB560JvTKjLMtqTU2N2tzcrNerrq7Wwiq4rX+tvzHoGYlLGrXlrHSsSjYYDHC73b0vPpUzhp4PKzEFRm2e9LZfC2MzMRK9Qw2uqsKAo3TtYGLWwsi1+lL+VXguoWNvkewoKbNKYjemiRFcgj1yrmqFnsR1Hlgmpy0pswz33MXSH8/DP+7Do7NVUEJR9P/nNRHwRuHZoy6VfSSEYH6yDcu/P45xKYjQxNTneiMNDQ1BNlpTU5NaW1urKoqiVlRUOPUmt1+q+O4e6YpnqzWbzYiPj8fl/lbMlCkXVtUVb6SppQvaAn1B0t3+7yClNNFoNOLKzXbfSHhUGh3wFcW8eBP//PwJz1HiIZRLIgYCSsk4DCS7rO5e9FVKDG8JuH4p5ImRSEJKhtVqz9UinLYoCo7ykEeeIjjmlWdnYPvy0O2YkC7Q8VsRTygZE1LsloTMRQiO9CKsPEfaumN6kufiLpg+SIaQuhBjnh74BrwTk5OzCypPP4hyVw8Wu802e0lCulOrIiIc8MFWfhSOD7P1m3sN35iEa0e3IU4QkJSZCu//zzAkSnf0DlyHVpZPqeq+vsQtn+34qZKLRCKor6/XfWEijNqlgS2w6dRJSK4zj8nMVNWfN5+066egzdT+dZ17tRKeDEWjc+OZTCbk5eUhPz9ft+Y1BoaGIc7P38R+Zu/cD39/O2ChlowEs4BAKICQOI3Dm4+gpaUFTqdTc4BCFEVoxqP5yQkkWiyQXwTQ6+1D9/3HoXfa+P4AXgJy5YzosjowgAAAAABJRU5ErkJggg==</Icon>
+      <IconSVG>color.homePage</IconSVG>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="92b87541-ebac-4e5d-86f3-e8dea32727e9" ClassName="SliderImage" Namespace="RelatudeFishingShop" TableName="slider_image">
+      <Globalization>
+        <Lang LCID="1044" Name="Sliderbilde" />
+      </Globalization>
+      <Properties>
+        <Property Guid="83fe4a36-a8fc-495d-b084-82e28de639b1" CodeName="Image" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="e4d76cfc-1dd6-477f-85df-0e0b25fd4aa4" Key="Filename" Name="image_filename" />
+            <ShortString Guid="15ace530-2a54-45fe-8bb4-b63e1a392484" Key="Type" Name="image_type_name" />
+            <ShortString Guid="7ba1142b-850d-401c-829e-52593df09624" Key="Extension" Name="image_extension" />
+            <Float Guid="84d74fbf-3549-4c1a-9b4d-ef0eb6b63e50" Key="Bytes" Name="image_bytes" />
+            <LongString Guid="ed3a41f3-acd5-4999-8d78-78a7a8bb22e2" Key="Info" Name="image_info" />
+            <Integer Guid="1fc5f7de-5384-4f5e-9ac3-eef7f69b4002" Key="Reference" Name="image_int" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJZSURBVChThVLNaxNREP/t2ySbXEzwoFjoQU8i9i5e1IuCelBURCp40SIIQol4kKKnXqoS0T9AwYu2JVDUi6hYI1YxegktiZimTWubzUeT7cak+dh9vje7jTVi/bEzu/ubjzczbxTOOSSYVOEnad5hlPDoLM8mPoCYaNrkTPUiFZ9yiKTu+oE7xEYoZrXOX+ktqB4/HtyZMDxNG3gfL4Db0pODyY+LB3bi0qFdsIWRcqQzGXv7th2K+IcNhQy28L5w81mFHCo/1/ikLimOtiVSCS4Vf4fJjzWDHIrGGh95vUJVrGNhegqlgu04nAiPx6oN3ufaOggF8OivPrrBzt0Y181qlZuiDllLWaQqmg2ul1cpki2WLC0yEcObvI23eY5YCfhkeER/PicDKUVq2V4LrWYLzboJm1uShHAFEt8qqHhzonnRqFvTvsM99GZyOEz1CdHAvH6ovgDJeukeObZbAyfFJ53zG7xBL+XUtdGR1QYG5Hg3QvMCLyJnQjSH80Njd6220r9Ss/xVJ/BPdAUHNGBLAA+jt88OUoIjV59WxoaPBa9EHqOnNwRNtWFx4cWCNAESoVQh2WQCw4OX0T/03Hh5/3SIplCTpzIP9u7Zjb79B+my/wWvymC5uyVBc5aQS7JUmEUum8PC/A/Mz2WRSH3Gl5llfHVlMT0Ds7wsltMNEqAE8l8OKV8MIbkk9jOnIqP7UKr0wjQVrLryvbhV2LTOFUhQC1xGCzY/N03kZiAffpQOlKAEwQAz7HY9GL13XVyc4p4gtPN04Tja7Ya4RoVM/13nzQH8Aow+SA07OE6+AAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="3b17b6d1-d229-4348-a27a-3cd525f51ec8" ClassName="ModuleBase" Namespace="RelatudeFishingShop" TableName="module_base">
+      <Properties>
+        <Property Guid="c3cb2447-dc5b-4894-a261-f38d2e73fd25" CodeName="ModulePages" PropertyClassGuid="9e798df1-93a2-49f9-86c8-13e5bf5220f5">
+          <Settings>
+            <RelationReference Key="Relation" Value="fb633cb0-0e21-4759-82fe-34187d0a1ffb" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Settings>
+        <Boolean Key="DefaultHidden" Value="True" />
+      </Settings>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="85c64b77-7d8d-4f75-9944-07ee1b5ebe7b" ClassName="SliderModule" Namespace="RelatudeFishingShop" TableName="slider_module">
+      <Globalization>
+        <Lang LCID="1044" Name="Slidermodul" />
+      </Globalization>
+      <Properties>
+        <Property Guid="55d32b9b-fd3c-4f90-82a7-9c1d8accec47" CodeName="Images" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="92b87541-ebac-4e5d-86f3-e8dea32727e9" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMgSURBVChTbVNbSFRRFF3nOuYMkXckzYxyKoqyEiQKcsqS3kRlQWERImXYUyqiIoqohCB691HRg4IiTCt6oNJPEP1URPWTo0yvycxpZpz7mNEZZ+be0z53TCLasD/2PvusvfY6+7ANhxrP+FWzBu7Nd9UnvgSHu7ZB5ZwDkWiMr9p1j7M5lNlSF5LHXfNhdOFYMHHco8X5zovNCP4yORbXNajuzel7wqUZ01/JOTKXfScv8KAe58zjN3hbtBfe929RNX9WGmN9/QMe+PYR9uwijQkMOee27CosRDQ8Ef6gCwEtqcEEHFmARWz5+SX805cvXHDrIdygHuNr993n3UoftxVkS1f1zzW1ObkF8tGWbnDDRGfbK/TzoTANBoua8EAozNVInIfpdphQlu1uUkSerTvQ5P+uGHbRU1i+Ezcfnqrck44ApukRXt+43wp+eN3oVDI5N6GLWBQzjYg9/naD5gNWuqqhXLphFXdEVJzWp2pS0gBam5yoGFsNJtkwdPtW2Gs3oihvJJWRdMQQIcWBc49f4nnAxGvNRo2HINX+xkLK6EiULNT7UmPiiRhTUzn46lNQOn4YeueuRvMLT7/06MyaMsM09VCnF13t7/DT+0GAYmf9A83pwC1Lg6V1DT6V5lcGdAiENUqn9cG6g02/SGZTj0QsqfVBudOS+6l42e5GS7T/ubUyrWcr5GN39qJo+gSwDAmSTcLzR/k4UjUTI/LywJiN5gWSJhvQm8NIJbDp+DOVRgYSlPVEvAi+K0SiazSUKKD3cmw7/x5mPIEMAiVpYKftqJg0DIv6fRhSXY2kwZhEAoBeBopPQ7dnFK7sq0CuU8fi8uGYPSsbZeW5KJs3HK78Llw/tgJPPRqiba9h0joLJjbZIWlmKia3nHiBysMtIP6YNmUyit3lYpMEQcsyiYVBl0zq9rU3hhI6ot6wtV6sdA3UIBJPqvTy8gdPGD1S90A2bZ2Uq5pPg9gdKL18C6lUP7IyaYH+VlR8z5Dax8U/8vjNf9zgXaEYX7CjcfAHCrdE/GMFTtvVmuPNpX1JXizo/WtZmYC1HIMG/AYPAPtpRCa9GAAAAABJRU5ErkJggg==</Icon>
+      <IconSVG>color.picturesFolder</IconSVG>
+      <InheritGuid>3b17b6d1-d229-4348-a27a-3cd525f51ec8</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="80d04535-b17e-4bb4-bff2-6d1f2bde0319" ClassName="ImageAndTextModule" Namespace="RelatudeFishingShop" TableName="image_and_text_module">
+      <Globalization>
+        <Lang LCID="1044" Name="Bilde og tekst modul" />
+      </Globalization>
+      <Properties>
+        <Property Guid="105e5f96-1f21-4020-98f8-10d7a8f9722b" CodeName="Image" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="d8c4e620-b9c4-431c-9149-276209ef6629" Key="Filename" Name="image_filename" />
+            <ShortString Guid="979dee70-6df8-4e96-abcd-2bb9ecb2ec87" Key="Type" Name="image_type_name" />
+            <ShortString Guid="ecf24288-88d9-455e-96d0-8d2be40c6b45" Key="Extension" Name="image_extension" />
+            <Float Guid="62d5f261-035c-4fc3-bcdb-d6a514a6f5b1" Key="Bytes" Name="image_bytes" />
+            <LongString Guid="bd3e25cf-be16-402e-984a-3f147b5b14ca" Key="Info" Name="image_info" />
+            <Integer Guid="ba2a2c43-9ff5-46b7-bdd0-073b7a5a5a42" Key="Reference" Name="image_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="d2a82d3d-c0fc-42b3-a55f-baf2cfbd0a1b" CodeName="Header" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="045c58e0-9775-4690-b173-ce5837f8d81d" Key="Value" Name="header" />
+          </DataValues>
+        </Property>
+        <Property Guid="bedf0322-4618-4485-9f44-e680e7f47386" CodeName="Text" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="6c6a9722-ee45-422f-a94b-10ca7090bb7d" Key="Value" Name="text" />
+          </DataValues>
+        </Property>
+        <Property Guid="8dceb77e-7eda-47a7-be3e-27f5588cb451" CodeName="ImagePosition" PropertyClassGuid="7d08c6fb-28f7-4d30-b407-439e018d2402">
+          <DataValues>
+            <Integer Guid="2b46e0bc-23eb-4916-b83c-2f20309ee400" Key="Value" Name="image_position" />
+          </DataValues>
+          <Settings>
+            <EnumerationReference Key="Enumeration" Value="a78356bb-ed67-495d-a307-9830738d09ab" />
+          </Settings>
+        </Property>
+        <Property Guid="9e98fb5a-4832-44a4-866b-9fd3305b0636" CodeName="LinkText" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="eac32eb8-8375-4ebf-aba2-847d78a7337b" Key="Value" Name="link_text" />
+          </DataValues>
+        </Property>
+        <Property Guid="6d843722-5e94-4498-a142-0105c2bb5e49" CodeName="Link" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="815e5669-4f2b-4f56-b775-be5fac34b9dc" Key="Value" Name="link" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI1SURBVChThVNNSFRRFP7ecxjUYTTqjeNYNkQrIRdisyiCJKRNq/50Ge6CEJPKIglcZGELF0FMQbUKwknaRqtWDTgUhAWDOK4a0xgaU3N+3v053nvnR8b8+R6Hc+693z33nO/wLCKCRl0ufJVm/cNjWzuha1la/izGcP/NPGUymarZa9k/cBynatU7FViaVo5x7+UsPIlEApkTn/DbXUJ+o99cqTIu3YrBGp9eEH6/zy7v1WAhOSftfzlmH+df8do7gG9ehu91QbQ0xxEuzGBlNWdjKPqFpCQSyrggYlxSkUnKu5Ku3Jmm/8rcjv0JTz8u78oYPB+0ahrfDiWV5dHB9fmH+KUK7rIncdDO4lzjO3Qeu2xIhtBzSOLAET/+8gEUBEc870EnSgSjnK5Tv6PahY65BBq8ljmvkXYHGEI53hnWxeGpG2d6Tk5kc+QzXCmhpIWQQnmCJLUWQnn1vPJCnTV52UYyuXj3/WTfM2v0bWrvJ3ZBJp3Gi9tnLVtygZu9zTjdNIdUYB0/2xjc9qPIHw5jPRTGSmsYFzo+4MGp5xjqjiHS8MPwXdc1iTxCyVZBvS+KNSyBvAXVSj3AOkBuFx6ne7GaCkAWBUb8M4bLi8x4j+ClBJFIBPrTkKrPCrZEZCYm6jYrzksJbFYomr9jJG4Zc5wAGhcHjTmBFrxKRY05gSBaJ8YRevLI8Fmx1IKewlSwva1PaqWFUl97PQXGjDfq64mI8kT0XqnAmJpC/75z3hvAJp2OSy5IrnK4AAAAAElFTkSuQmCC</Icon>
+      <IconSVG>color.fullImage</IconSVG>
+      <InheritGuid>3b17b6d1-d229-4348-a27a-3cd525f51ec8</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="512a493c-2d5f-4f3d-9a9e-16033f665f4d" ClassName="ProductsModule" Namespace="RelatudeFishingShop" TableName="products_module">
+      <Globalization>
+        <Lang LCID="1044" Name="Produktmodul" />
+      </Globalization>
+      <Properties>
+        <Property Guid="f1a60762-1131-4242-8e88-71229fcea4e9" CodeName="Header" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="637e9893-4202-4b3f-b076-7ae32c24ef57" Key="Value" Name="header" />
+          </DataValues>
+        </Property>
+        <Property Guid="3e6b7a80-7c1c-4b75-ad5d-70cd8ecc6b55" CodeName="Products" PropertyClassGuid="c38c7283-5478-49be-be77-69bd5a7b99a6">
+          <Settings>
+            <RelationReference Key="Relation" Value="e4941d99-5880-4caa-baf7-c7f4ae65db37" />
+          </Settings>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOfSURBVChTVVJrTJtVGH6+rzfKrZR2GzCUoaPMyoyb17gx3Bhu2ZXFGYm/pnF4mTHGv+pP4vxjdCrJ4g1FNnUZRAZsTC7TKgsBgS7SC5RSKLTQllLafr183/m+49fqjD7Je07Oe97z5D3P+ygopWjaNTbATF89FNm+idExmUwGLCKj1N9XT+G8fvLrNfcQnet/jfLeHymbDIZfuXh5BB7laRw70wpk3jh6jj+Y2TPBrDk7aDiwhLL8BDz2O2Bo3E6J/2dsBHrBqvaDnfzhJZeoMcAmvgMbv/dvjpnrJ1WOnmOzJOWj0bkuunDrbTr1be0bWU5799HIjv0f6KKubiiZKFTGJ6ESg0i4OkBKGsGSRFILhRZXR5KIlbyF23N6tH5vxcq2L9E2wEBZ8/ygJvO1azcn3YWG/srgegLe9XxYrVYQQiLZHu6Go/tol63z8K7/5rKLs+/E2eXJC1RKeGlyqZtav6vzTLbt0WbuGGfvcan88RZm1W1Ban0WFRXboFAWIL7ux/xY52V2e/1njCrtxhZNAIVpF3KLTVALsxCD/RB54QhDEotUQUJAOoSo7QtQsow0ciHGWXicCxssq1JBSEdw4ZIdofL38dX4PkS2fgS34T0MuIrzWWvH6ebz51tRe+AAzr3ejKcbnsOf0w7wQy8uovywkB2x2Wx+oPnlM1MVlVVqi8UCk8kEg8EQbm9vD/zrgbuQ57KZSvRNKknnDPefKhKTIYQ9g3E5d5GK0oc1TYO+f0qzyBLM3Gh8BhJ9V6N/uHbLjmeRo6+SBeRBZFnmb7XgHvMesLkVSHNBrLr+QCxoH6Wi2LL77Og1RnaTYDr4qVKIhRD3/w6Jj4KPycOO+rHmXcbupk+g0uYBnAeUc4FJLAK6h0BS85jou0KUEiEclRidWluA4sp6ILWCVGAcRbk8ChUJMOFh2eMU/MoAYtEIiLYI8DmQs6kWkkA4pcQLyKogtwyRQ0o+/zajxZ25CuiLH0PI6kBDjQ0FKorOib0wlpmxtrqIKmMIuiRhFK823lvPRXz3aQvKMDLlRduVUTxSdwKz1mHcHLoNniiR0jyFX6cLsORfx/jYGIxaHjX7mtA7JSiUO18Ybsg0MPH5E5t/+oX/hugePZQRNy1pkEqmsLCwgFBIdooMjuMgEkGyLSotB4G6jVgy/r8xVldXK0pLS3fm5eV1bS0rLcnJUatlLkYnuD6ejeh7jEZjl1ymSqfTos/nC3Icd+ovoUb6gY+P9+gAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>3b17b6d1-d229-4348-a27a-3cd525f51ec8</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="f649cb50-47ad-47c0-b3d5-e11087c665f7" ClassName="ControlPanel" Namespace="RelatudeFishingShop" TableName="control_panel">
+      <Globalization>
+        <Lang LCID="1044" Name="Kontrollpanel" />
+      </Globalization>
+      <Properties>
+        <Property Guid="825fdc28-5732-480b-9979-5021ce85bd72" CodeName="Header" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="a89cb04c-e6d4-463a-89c5-99f966196e93" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="b54ed168-846f-4e21-83ac-4dc9af8baa7b" CodeName="HeaderLogo" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="f34facf0-c247-4802-a418-3c10f9c21640" Key="Filename" Name="header_logo_filename" />
+            <ShortString Guid="fea79d19-17dd-437c-883b-e162fc6ff619" Key="Type" Name="header_logo_type_name" />
+            <ShortString Guid="32b449ae-ce40-465f-886a-7570e8f3d906" Key="Extension" Name="header_logo_extension" />
+            <Float Guid="66a96e7c-c6de-4420-89b1-b52858ba6f86" Key="Bytes" Name="header_logo_bytes" />
+            <LongString Guid="3b978bf8-c49c-42bb-98ed-f4e9c293f57a" Key="Info" Name="header_logo_info" />
+            <Integer Guid="bbc06664-569d-4943-8c0a-1d2d0031b396" Key="Reference" Name="header_logo_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="9b0f7b06-7665-4df5-8ae6-d1f6b4a2aa9a" CodeName="MainProductCategory" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="5b114b4c-ef9e-478e-b39c-1faf102fc411" Key="Value" Name="main_product_category" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="27018209-b6ed-485c-90d5-0ce81b5e8799" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="8ebc0655-1dc7-474c-8a4e-2953665348af" CodeName="ShoppingCartPage" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="b195b66f-db5c-4543-89c8-0ec8504f2036" Key="Value" Name="shopping_cart_page" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="15264b6f-e646-49c4-beb8-9e4911b4f22c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="8aa12960-fb6a-4b7d-8381-1da335e50c6f" CodeName="CheckoutPage" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="8d945694-f5e2-438e-b893-eefc6fdae883" Key="Value" Name="checkout_page" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="15264b6f-e646-49c4-beb8-9e4911b4f22c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="a4625963-817e-4a7e-b22e-b3713c2b773e" CodeName="SearchPage" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="40a6f4d9-6da5-4180-ba80-c6f5acbada23" Key="Value" Name="search_page" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="89d055b1-ed59-4634-8c36-3ecdccba6745" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="3b2f9778-ff9b-4a65-954f-5ec68bcaed0f" CodeName="FooterInfo" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="ad16b69f-0de7-456a-9a80-2ae7b9fc661c" Key="Value" Name="footer_info" />
+          </DataValues>
+        </Property>
+        <Property Guid="7cd8bd97-33dc-40bf-9c9e-26ff2b53cb23" CodeName="Footer" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="a89cb04c-e6d4-463a-89c5-99f966196e93" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="5ad9af94-7324-4f2e-a8ab-4774083d1b27" CodeName="FooterLogo" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="e25bd78c-450a-45c0-aa30-18b16f2eceb0" Key="Filename" Name="footer_logo_filename" />
+            <ShortString Guid="46893031-79d0-427f-b05d-37d09e778338" Key="Type" Name="footer_logo_type_name" />
+            <ShortString Guid="d3ae3fc2-f1a7-4fca-a430-5269d34b2afd" Key="Extension" Name="footer_logo_extension" />
+            <Float Guid="441f2c31-8980-4756-bf18-1f67191bb3f5" Key="Bytes" Name="footer_logo_bytes" />
+            <LongString Guid="6e12d291-157f-494d-b5d7-a96672178f86" Key="Info" Name="footer_logo_info" />
+            <Integer Guid="c09219bc-3434-48e9-bf83-cf2c0e41719f" Key="Reference" Name="footer_logo_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="35e65af1-3259-456b-90d3-3857da62d14a" CodeName="Instagram" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="a9e1be71-9e8f-45d7-9c32-1a42b08b89f6" Key="Value" Name="instagram" />
+          </DataValues>
+        </Property>
+        <Property Guid="a1b29b53-9e5d-4fb8-a6fa-56d2586d7eeb" CodeName="Facebook" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="4d7d5ae7-cf56-4ea8-a575-5d6a79ea4afa" Key="Value" Name="facebook" />
+          </DataValues>
+        </Property>
+        <Property Guid="8a2f79b6-4b8f-4b79-b082-224c59e20389" CodeName="Twitter" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="8c3c8b82-ff59-466c-aeca-b8ba10e7110c" Key="Value" Name="twitter" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Settings>
+        <Int Key="MaximumInstances" Value="1" />
+      </Settings>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJMSURBVChThVNdaFJhGH40g7FolFFsFgX9gLUuRjeBF4V3Bd6Moi66cUVRwYF1tYKSXcQQurCOpTN/IBpGYSTECmFQOrDoZ0GZoxwRahkYVuhmeY6+fZ/Hv6nRA8857/e+z/u853zfOSoiAoeaX364zbSCZ3Q6nQR6bGExoaFxOp1ysVh8BvIeIpoer1arxXrg8Xji/N5oiUajpNVqFXvM3aVwOLxdr9erQDNXiDxHmLDNo0632x3PZDJkt9vZssWTY8l/+s3breYhHsuyDGa7pAimLxJ61wGlIvA1Boz4VdUODrq2/xVFnESTw1XLdnYkfD7fKHsOqb7uECSTSQqFQixU1prapAYkSUI8Ho/k83lKJBJy8y0CZ0V7ZucZg8GgKZVK4IxEIucU6zsnRWK7RYFRslqtxbo9pxp+s4gdRgFf3gEDgxj7c+uhYlkDvZwiCo4RzU4SXdoWaO3mBE2NED29TnRhy4P2oiLokmyl1+vl+7KYTqcpl8uRw+Fg6WZ92Vl1g8vlkkwmkyabzWKWQRCEfTabjSqVChhbtqkL2LQDTPTIaDSqCoUCOHljT08P1Go1/xjmOw3unRLRt0lAWQI7DHwePIFUKoVYLManlmuTE4w3LRbL1aaB/7iItRsF9O8Gfn0DKhKwaj2wEIaUir9Yef75XkW4HCq6fUzEms0CBmqNi98BTS+wegPw4QmQen0f4x8P1/QdUNGNg4Q9R4GfKaAsA339wPwMkJwL4vKn4Zrun1BeYWLoPeTSLsi/2a9SCmIi/d9GBcBfaiHi8jro0KcAAAAASUVORK5CYII=</Icon>
+      <IconSVG>color.controlPanel</IconSVG>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="a89cb04c-e6d4-463a-89c5-99f966196e93" ClassName="InnerNodeParent" Namespace="RelatudeFishingShop" TableName="inner_node_parent">
+      <Properties>
+        <Property Guid="cb4a1356-c0e4-4fb7-991a-d26dccd3afa7" CodeName="Node" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="5f2ed81e-9552-4715-9fab-1ba403df849e" Key="Value" Name="node" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="15264b6f-e646-49c4-beb8-9e4911b4f22c" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMKSURBVChTdVJdSJNRGH6+73NuMnJSy3BhQX9WZNCFYkUYinlRFkFQUtRFBaUYiHchXQTd9INQQV0YQhFU5sQWRH+aP/RDppi2ZrnlltvcnLm5H/dt+77TOWcSWvTAec/h4Tnved73vAIhBAwiCw0P7OQPIzQ8chDX8FtwxmwPE1HSYLT/XVpre3gT2Y636Gy+nFYshBCOzJFXviSkDB1uXO0IZSRUoK9/CkRlSgIhEIwRz6yA4PhHiKKYzmH/8UNdkZsnUDFUCFDpQaXqExcsQS4IRuOk28cogpRCU1FutL8H3e9jIW4rlQLam+9guz6CXO8ABs13UV2yCfvWeQ1ccOri075p2wf1ZWcPsVqtUEMTGBoaQiKpyP/U8TfE6vOPfeFIhISpD+ZlJiKTQFgmvplZflOcmFa0TR296PSreOMn6J0GPoQyaEsy0xl4EFhk5SWRTCSRmAtDJQojQaXA8LcggppJWjwtdN5TyR4T30XWHEGQsMprQU0RsGT8CU5tU+D4OoCqqqrLImtbQaYHu8rKcLamFgcqd+PrlxGsXLMFxcXFdVJx2eGlNnd8qxgay6ysKBcsFgt0Oh18k17y4vkzO+/DscbWa0pKOPorpugiMn96MZiPBcjSAtlZaDFfOVzPE1SeexhsvbTXUNt0D6b8HGglFQqhKtHAO8AXDRJdLtswLtWfwdHGp6EX1w/l8C7E2KtiBrZs3ojCHbv5Z/8PGkmEMj9bDLzPDGxIPFMOTLom8dPphnPcheHRj/hk9WJgfk3YrQjPeOlwzl+i4A74HNLgD+TA6oxD8QzCmHDAlLsM9ok3iOeXQ9AZEB97hrUrjbjfcgtLCdGWlpbquQPCblMH7qHXUPtv43jFBoyMudFmNsP/047V4XfQfG6B3/UdbW1mRGNx1B0p0RUVFbl5AkOWGFJTczi5fydIKsEorDcZIMdlOJ1OdHV1wWaz8bMsy0gl018VoUO6aJwLCgqkvLy8Qr1e324ymZZrtVqJ0mIgEDhNd7fRaGynu4YmUTwez1Q0Gj34G6SemLQB+QG/AAAAAElFTkSuQmCC</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="4e9ae475-0ac8-49aa-bc98-bb730b26b8be" ClassName="SelectedOption" Namespace="RelatudeFishingShop" TableName="selected_option">
+      <Properties>
+        <Property Guid="94ed6f0f-9bc8-4d04-8c13-eb005e19e788" CodeName="CategoryName" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="c796ab5b-e43f-4e58-b1b6-fc157a887d1f" Key="Value" Name="category_name" />
+          </DataValues>
+        </Property>
+        <Property Guid="59b72926-56ea-4c58-805e-7bc22c288a5d" CodeName="SelectedOptionName" PropertyClassGuid="95acb333-a3e6-44ae-934e-9702d144bc68">
+          <DataValues>
+            <ShortString Guid="5cbea149-e6cc-4cd5-bc1b-7b51ebde9bad" Key="Value" Name="selected_option_name" />
+          </DataValues>
+        </Property>
+        <Property Guid="73ba6e7c-341e-4bfe-beac-992df4393190" CodeName="SelectedOptionPrice" PropertyClassGuid="3f213560-e0b2-4532-ba37-4b093f7168a5">
+          <DataValues>
+            <Float Guid="aed0112f-0c23-48f0-a453-5afe9cd71dfe" Key="Value" Name="selected_option_price" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHmSURBVChTpVMxaGJBEJ31Dq5OqnBgmlQRkypgYfMXf7CwsTFFvMIqVfq7IlwsrtDqirvqKqsEEhAbBc3J/ksdUoRoJRzETsQgKCIIe/PG7C/OgEUe7H87s292Z/7sKmstARF89n/u29Cj9n7secwm9JSfy9RsNpeS4+DYGmNIa61ChcNKSIQn4hkMBnY4HKp3jx8e/9yr+7+TyUR1Op1lyOH1oYS9gqJkyGrvJndDGL7vw7bJZNIyn4sgHo8bnLVT3rG9Xs/yeVT8WFTMyzQ3v2xCJ5XxUDAcVur4H8q/8l+mK0BeAelLTdjFjdKoBJ/HzKalyGw2K75ECGq1mpdOpw37xY5Mp9NzNAIGs5fNZg2qqFar2gkokUgQSszn84bLxC764fQhgEBtfd0CW24NmLhNPNWyeOFdkNr4vCELDBwDlSwCo9Jo/X9Yh3XNfA2uI+iteo/JfD6n20+3mK4AFwuo1+sSmMlkaLFY4LKJXzI4+HXg6tB3J3dhjQCvSWAul6PxeCy+VqsFEq1kgF+dSqUoGo2a3e+7sogPwxQKBer3+zLa7TZ8mn1BpVIRgWSw/W1bTnGtiMViwt1uVxgviKGfzp7C7DiG2CbJgK9FgCfWaDRkI3dNXKDr69HvI5DAad7YRqJ/0fcYF12FTG8AAAAASUVORK5CYII=</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="0529124f-268c-42b4-8ff5-3990e15042c7" ClassName="RelatudeFishingShopOrderItem" Namespace="RelatudeFishingShop" ReplaceClassGuid="a90a2ee2-31ae-44ce-96bb-0333d1cdc622" TableName="relatude_fishing_shop_order_item">
+      <Properties>
+        <Property Guid="97ac5a31-24d2-43a8-af9c-80977f9e69e6" CodeName="CustomeOptions" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="4e9ae475-0ac8-49aa-bc98-bb730b26b8be" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <InheritGuid>a90a2ee2-31ae-44ce-96bb-0333d1cdc622</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="7b1c0f56-4bf7-4948-bc38-e85ed386fe72" ClassName="Product" Namespace="RelatudeFishingShop" TableName="product">
+      <Globalization>
+        <Lang LCID="1044" Name="Produkt" />
+      </Globalization>
+      <Properties>
+        <Property Guid="2fb3bb0e-4512-4956-8045-78af98eced7b" CodeName="AutoGeneratedMetaDescription" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="4899b919-6df4-4dc1-9f9e-78e0343fa305" Key="Value" Name="auto_generated_meta_description" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANaSURBVChTZVJtaFtVGH7OvbltEtcmq+s66mwn7cZcZbZDdFCKGylTttVV5o/+Fob4wQR/iegv6Y+BVNENdAqKWGRKN+j6sbFNB0O7ENdu6tpkydI0WZuuN0mbm+97z73H94a1DHzgvYd73o/zvs/zykIIDHQFrrK7I6+stTcyD7NvbEhY84vkhE8gNHns+3T0N3H/8ttCT/wipJKaecvjdcHNgpgdOwfYOcGxvg77tI2lQ8Mis/IAzZuKiM39DSbyc4InryC7Mg5JOQhp5tybEUfdVsiKD/9eOnuymndv8pgSHDsa5uUlod2/IBaufyBu/9jzXrXm3OiRtd0HT3m0yCgcTIOyZT8UU0UxMgy+rR8OXiy5ILtQv70LqKSRin8NI1NAWS3AW5ujJqiMjcDprg7L4P80P+tj8enxke6Pwm9UHev92xYcPXJh9vyrXY/fVT+hiddOLM58KaxiQpQejIo7P70cm/mh22X7WGi8z9r+4iB7GL2B8moYra07IDvqkF9NYj5w/mep3XeGKZUommpXUF+JwN2wCzVGGKZ6GaZuHGa8GBcyT9EEKWiz30HwRVTghpmXEAstZCVJUQAzR5ZF3Y4D5FQolv6VdtBUTrm/7eZSpSL6vC37gVIC2UQYzi29CPtHFgQ3WzbG8X+xd1i99bm4OXRA3Pi0bWPUDaLWQbpsFZY4KSzr3SfbXveapRQysWt5uvtGmNbQcwPXlh6FVlEtcO9S/yFY4uPazZ09TbuPw7l5JxGogxMt89cH8fSebkjuVlQKKh5GbiGnzvmFaQ7uO+G/yGibjF29px1GLoV88g9YugY9R2JrSaQTi9g38BUU1xNAIQZRiIAV44BnL3h5HtMTv3KHxXlBWMxT46pDwzM+oLyM8spf8Lp11MtFsMzvtOMC+vJV5LQ1cJcXWArC2dhjs1iQLN1AlQVqmcinYEbOPXC39KJxZyfy6StQlyexSnG6qIWR0kiGLHihRN0akKhKIDZ1BiVNBWoaiBUZMDSAkzm3wdAt8GwJeipPbzTB/VQf5E0vIBqYAnV/Z0OF6W9fIvat94npd5qf7/c2dx6mQmVoiSnaDoHk7F2k43+SGtZZsqGeT6KLdt7/ZFzH1GcdhyjwQ1hWDZ2naP8vPnI9BuA/04gDVkiTAGwAAAAASUVORK5CYII=</Icon>
+      <IconSVG>color.packageIcon</IconSVG>
+      <InheritGuid>2145bcbc-2886-42d4-9ec2-7134e82b8f84</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( RelatudeFishingShop.Product ( Projects ) Native.ProductBase ( ItemNumber NumberInStock Subvariant Variants MainVariant MainProductImage ShortDescription Description Files ProductCategory Reviews Manufacturer ProductDiscounts TaxClass ) Native.HierarchicalContent ( ) DynamicProperties ( JsonProperties ) Prices ( PriceExVat ShippingCost Currency1PriceExVat Currency2PriceExVat Currency3PriceExVat Currency4PriceExVat Currency5PriceExVat IsVariablePriceProduct ) OrderItems ( OrderItems ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags AutoGeneratedMetaDescription ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options TemplatePath DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="2e34c7e4-41f5-4b43-93b3-2b7b5e5b163e" ClassName="InnerProduct" Namespace="RelatudeFishingShop" TableName="inner_product">
+      <Properties>
+        <Property Guid="bf6a064e-acf3-4c20-bb08-1d0a0f75b5d9" CodeName="Product" PropertyClassGuid="1d307d77-8e67-4cae-bea6-41e4e1f9c1d0">
+          <DataValues>
+            <Integer Guid="41d81bd6-4739-4522-a6fa-61033374f4b9" Key="Value" Name="product" />
+          </DataValues>
+          <Settings>
+            <ContentClassReferences Key="ContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="7b1c0f56-4bf7-4948-bc38-e85ed386fe72" />
+              </Classes>
+            </ContentClassReferences>
+          </Settings>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVChTfVJNSFRRFP7um3EcfyZnGpsRtRJHTNrZwm22iRZWGATlIigIggg3GUEu2lXWKiIIokWLqVZBA0aQgT9goKCMYWr+xUg1So3j+Jz3M++dzn0zTqLQuXyce889/+cIIoJDj3uP0NbyASpKxOZImJazx4G+qwGiARQhhofeUzBYjkwmjbajZ/DPS4EEfQLxyVMpoBhVNdCaQxikl0AQcCf2xaD+1qDqG0ALm9y8doFON03ALmO7CjbzMDYZW8xYUTy4HqCecymIGhbajAKRztYGI5vNkmmaEEI4H8lkEj6fD+ZSO+rqv0LE43FKp9MwDMNBJpOBy+XC5OgHuD3le+vYTSLWe4gqg958ghImQ+X6sgKx+Vb2MMJlc0J7iFN6+CoAhQ+oigWhHeCKZGTikhXDXwPdDkNVQtB8ISzanRj+GYXws6KjcPAb9OZZaOFpqJXTSJl3YBlzMGXDODV3IjEHys3ANGWpJrsuRX39O5Qc5r65DIjnz55QQ6QFqqpC0zT4/X6MDvazly2cv3Qj36i30RfImbI2Tl02VIKTd7gk2So5BsmdO8FdUoHOrisQ9y4H6XZPI6DJpPh322ibb5M0LHL+9Bq4/2iRh807d6srld+Cgo//knTMSyDRF5V9LuNHgMGGNg/Eku9qxv5dYJnFXZM6ThBpw7pidmaKFJHj7hEsy3Ig7zmLZXwyG+tcshetrW1OEyc+v8HJhm4oPNy+p5yBptsQ9iSgD0ExBzjMD3hyUVhmCh79NbzuP/B7PmJsbAypxYs4dawbQkYvLL8rXG3fbWxqR6juBJa+DIHctVhNfIdSGsFaYh6WUotUchXr2QDSC/34Nb+GxAIwFQemk2fz68wzJjln27Z5IeQykHOXXFEUrKysYHx8HB0dHYhEIjvmA/wFE6lO6obHPXoAAAAASUVORK5CYII=</Icon>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="89d055b1-ed59-4634-8c36-3ecdccba6745" ClassName="Article" Namespace="RelatudeFishingShop" TableName="article">
+      <Properties>
+        <Property Guid="d20d57b4-2653-4411-9c04-cf90276e7b1e" CodeName="AutoGeneratedMetaDescription" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="5d371b5c-1f73-40f9-887d-e098c2c58a6e" Key="Value" Name="auto_generated_meta_description" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL1SURBVChTPVJNaFRXFP7uz3szbyZpJglRmUWt0EVbBClWlFrcKLTaVs3OTaGL0o2V0o0LaelKsSjuRLS4kELWXdSNulA0GGwbDRV/8K9KrUPSOPmbvHl/9/Y7b6IXzn3nvvudc77znWu897jVvytW4tz+13m15/jE8uzDmYa623K+Hecor6ae534pcdjQ1L0f5+7DLzvgZouIz49NXNQKH+VF8ei3gx+uV/OdxD98aTAUdvH1yclcZ4RGVmE2raDQNtdx6jDe1phYsGi/6PSSLsZZfndGkRWQZAU2v1XB4fPPcOXiX1UNrsJ50x9q9NHqocGNpwm2vTOC6pqhuRKQFJ4gQLIFRqEWWvRHATqLGUoAt8V6mCAKUjQHHN5sOKxfrVx7evmx2vHDlS/rA5UTxEVQ3J3HfzPFmWs/bf1WgtWnR8env9+3aUSz25x1SBi51vj1wvP45wNv1yiO6q8ajZCAgGbpb2kqHP6iGUkGLa1VLQEkVw2kC4uplkcYBHIPXeRkz9pS3ihFouwisBAFS0CWe/hCtCA/EnROQRPIuj1A2s1x+pHH7wsa4wsG15co1JJFIRFcNp7PXnz3XrrWO6/l10BkS05RxcwLoJzFriPjV385sPFdttogZwNur5Y0wR0zSxnG/phD61myfOf2vaFrpz5L5KZU2li9MTB6+Enbmqdtg7/nDB7z+2BW4c40MPmPw7qROvZ+0MRXo2trO3dv6G4/dHnsdQIWIRNQKjGFUGQTXUVf+lVeXH3QRetljOnZGN9sWwUbBaOvE1AcUCgOQsOKUaUymH7EBLXAoK8W4I0oxECND5Nhvhfa2/NU5KUxkSMV0UV4kUQpubwwSSbiVZhMziljZFnZMh4yRv/4Z8qBMhEDvUxXnqjqASXnymwx9nGAeDEt/ZJBt5O5hBmG6wEG+Y4HOarBGq3PokHq4jfKc4Bhno1WLu6kfEMrY9y0/9L+PPOjSqn32UBNLsrFqr1meixWPl3n3CQrj02d/eTs/+fXU0hQ6911AAAAAElFTkSuQmCC</Icon>
+      <IconSVG>color.documentHeader</IconSVG>
+      <InheritGuid>7c528e27-4f24-44be-a6b6-2766bb1834d8</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( Native.ArticleBase ( Ingress IngressImage BodyContent Files ) Native.HierarchicalContent ( ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags AutoGeneratedMetaDescription ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options TemplatePath DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+    <ContentClass Guid="597956ef-0eb9-4d58-8ec8-5891e7cb870a" ClassName="RelatudeFishingShopProductCategory" Namespace="RelatudeFishingShop" TableName="relatude_fishing_shop_product_category">
+      <Properties>
+        <Property Guid="043d9832-60f2-4b1f-aa39-304cb74acc33" CodeName="AutoGeneratedMetaDescription" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="9b25657d-506f-4f38-b5aa-c3d85323e408" Key="Value" Name="auto_generated_meta_description" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <Icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVChTpVJLS1tBFP5u8A+46KKguJCiRQNRdOFKKq1242OTqmBQcVVQ8T9006JgN+oi7UJQ1IWPtDVGEKOCCGKwhXZREEoD0lJUcu195b5OZ6aJN1eRLPLBd8+cM9+Ze86ZkYgIHAHxZbgbAY9w9kylmCEEXu5EhKa+aRE1r6rpJicPkTu+mPaiiURC5OYZUKou0b3SLhQvVnu8Hc7J7QwdpK7Y0ov5BJyxWIwZz5cm9kfItC3MtM1LQ/EwyepfrIcTUsPbIGmK7rV2H4oKvJkwHH+Tafj9d1+GTzB7+Avp9EXOy6Gw4ng8zoznc/qcQkYiEWZYm2PJIbJYm3NPF6T+D12Uub7G1sCeVPemluyshcCTh8+hm1nxu9CDRlzJslgHHz2GY7slzGF2XyXNtKEYJmTNwHRvpZTb8sE3hkL8zqhoLnfQUg78PL81mgIULbEYbg5IJpPkui4cx4FlWTAMA5qmQdd1qKoKRVGEzcei0ahoqfQKRncH6VlFJ1xy8OnHGt51LIuT+2Kd1FrRBs1W8fHrJvZGjkS87nUNhWqDTO/i5MtnlBnsDjfOVuDw8l2HawT4fS79WUY2awrmYRoWjk9T7LX890tsAfgHJlZUjd7inN8AAAAASUVORK5CYII=</Icon>
+      <IconSVG>color.hierarchy</IconSVG>
+      <InheritGuid>27018209-b6ed-485c-90d5-0ce81b5e8799</InheritGuid>
+      <PropertyPositions>Commands ( ) Name ( Name ) Main ( Native.ProductCategory ( CategoryDescription Files SubCategories Products JsonProperties HighlightedProducts Shop ParentCategory ) Native.HierarchicalContent ( ) Children ( Children ) Meta ( MetaTitle AutoMetaTitle MetaDescription AutoMetaDescription MetaKeywords AutoMetaKeywords ContentTags AutoGeneratedMetaDescription ) Options ( Parent ShowInTree ShowInMenu ExcludeFromIndex Options TemplatePath DefaultReadAccessOnChildren DefaultEditAccessOnChildren DefaultPublishAccessOnChildren AddChildAccess DefaultInTree DefaultInMenu ) Versions ( Versions ) )</PropertyPositions>
+    </ContentClass>
+  </ContentClasses>
+  <Enumerations>
+    <Enumeration Guid="a78356bb-ed67-495d-a307-9830738d09ab" CodeName="ImageModulePosition" Namespace="RelatudeFishingShop">
+      <Values>
+        <Value Guid="eb93a34e-33f6-4869-aced-bb0bd0916d30" CodeName="Top" />
+        <Value Guid="400b6baf-a2de-4fa0-b3a5-0d5812fda405" CodeName="Right" Value="1" />
+        <Value Guid="d4e407e2-3089-4fa3-83df-344a0f81aaf6" CodeName="Left" Value="2" />
+        <Value Guid="a7c648b5-86b2-4158-85fe-d7f805aa94a5" CodeName="Bottom" Value="3" />
+      </Values>
+    </Enumeration>
+  </Enumerations>
+  <Relations>
+    <Relation Guid="fb633cb0-0e21-4759-82fe-34187d0a1ffb" ClassName="RelModulePageModuleBase" Namespace="RelatudeFishingShop" TableName="rel_rel_module_page_module_base">
+      <ClassGuidChildren>
+        <ClassReference ClassGuid="3b17b6d1-d229-4348-a27a-3cd525f51ec8" />
+      </ClassGuidChildren>
+      <ClassGuidParents>
+        <ClassReference ClassGuid="0c407e42-4721-4680-a902-3afc6a7af059" />
+      </ClassGuidParents>
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+      <RelationType>ManyToMany</RelationType>
+    </Relation>
+    <Relation Guid="e4941d99-5880-4caa-baf7-c7f4ae65db37" ClassName="RelProductModuleProduct" Namespace="RelatudeFishingShop" TableName="rel_rel_product_module_product">
+      <ClassGuidChildren>
+        <ClassReference ClassGuid="2145bcbc-2886-42d4-9ec2-7134e82b8f84" />
+      </ClassGuidChildren>
+      <ClassGuidParents>
+        <ClassReference ClassGuid="512a493c-2d5f-4f3d-9a9e-16033f665f4d" />
+      </ClassGuidParents>
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+    </Relation>
+  </Relations>
+  <Scripts>
+    <InternalScript Guid="87d3d975-d4ea-4cc8-8477-07153378bc4c" RunDuringSave="True" Active="True" Id="webnodes.CodeGeneration" />
+  </Scripts>
+  <Options>
+    <OData>
+      <Settings>
+        <Boolean Key="ODataExposeAllProperties" />
+        <Boolean Key="ODataExposeAllTypes" />
+        <Boolean Key="ODataEnabled" />
+      </Settings>
+    </OData>
+  </Options>
+</Definition>

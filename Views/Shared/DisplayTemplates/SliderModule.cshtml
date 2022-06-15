@@ -1,0 +1,21 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@inject WAF.API.Web.WAFNativeContext ctx
+@model SliderModule
+
+@if (Model.Images.Count > 0)
+{
+    <section class="module slider-module">
+        <div class="fotorama"
+             data-autoplay="true"
+             data-loop="true">
+            @foreach (var image in Model.Images.GetAll())
+            {
+                if (image.Image.IsImage())
+                {
+                    <text>@Html.Raw(image.Image.GetImageHtml(1500, 750))</text>
+                }
+            }
+        </div>
+    </section>
+}

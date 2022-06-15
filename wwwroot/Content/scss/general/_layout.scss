@@ -1,0 +1,32 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: auto;
+    color: gray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    font-weight: 300;
+    line-height: 180%;
+
+    @media only screen and (max-width: 700px) {
+        height: unset;
+    }
+}
+
+.container {
+    flex: 1 0 auto;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    @media only screen and (min-width: 1300px) {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    @media only screen and (min-width: 1700px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

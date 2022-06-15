@@ -1,0 +1,52 @@
+﻿@using WAF.Engine.Content.RelatudeFishingShop
+@using WAF.Engine.Content.Native
+@model ProductCategory
+@inject WAF.API.Web.WAFNativeContext ctx
+
+<div class="product-category-page">
+    <div class="text">
+        <h1 @Html.Raw(WAFAttribute.NameAndValue("Name", Model.ContentParentPath))>@Model.Name</h1>
+        <div @Html.Raw(WAFAttribute.NameAndValue("CategoryDescription", Model.ContentParentPath))>@Html.Raw(Model.CategoryDescription)</div>
+    </div>
+    <div class="product-category-container">
+        @if (!Model.SubCategories.IsEmpty())
+        {
+            foreach (var category in Model.SubCategories.Get())
+            {
+                <div class="category">
+                    @if (category.Files.Count > 0)
+                    {
+                        var file = category.Files.GetByIndex(0).File;
+                        if (file.IsImage())
+                        {
+                            <a href="@ctx.GetUrl(category)">
+                                @Html.Raw(file.GetImageHtml(500, 500, true))
+                                <h4 class="name" @Html.Raw(WAFAttribute.NameAndValue("Name", category.ContentParentPath))>@category.Name</h4>
+                            </a>
+                        }
+                    }
+                </div>
+            }
+        }
+        else if (!Model.Products.IsEmpty())
+        {
+            foreach (var product in Model.Products.Get())
+            {
+                <div class="product">
+                    @if (product.MainProductImage.IsImage())
+                    {
+                        <a href="@ctx.GetUrl(product)">
+                            @Html.Raw(product.MainProductImage.GetImageHtml(500, 500, true))
+                            <h4 class="name" @Html.Raw(WAFAttribute.NameAndValue("Name", product.ContentParentPath))>@product.Name</h4>
+                            <div class="description" @Html.Raw(WAFAttribute.NameAndValue("ShortDescription", product.ContentParentPath))>@product.ShortDescription</div>
+                            <div class="price">
+                                <h3>@product.GetPriceIncVat().ToString("N0"),-</h3>
+                                <a class="button action-to-cart" data-id="@product.NodeId">BUY</a>
+                            </div>
+                        </a>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>
