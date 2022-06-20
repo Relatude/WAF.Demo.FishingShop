@@ -4,7 +4,7 @@
     "classifications": ["Web", "Relatude"],
     "groupIdentity": "Relatude.Demo",
     "identity": "Relatude.Demo.FishingShop",
-    "name": "Relatude demosite",
+    "name": "Relatude FishingShop demosite",
     "description": "An e-commerce demo site using Relatude CMS and MVC",
     "shortName": "relatude.demo.fishingshop",
     "defaultName": "RelatudeDemoFishingShop",
