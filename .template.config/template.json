@@ -2,7 +2,6 @@
     "$schema": "http://json.schemastore.org/template",
     "author": "Relatude",
     "classifications": ["Web", "Relatude"],
-    "groupIdentity": "Relatude.Demo",
     "identity": "Relatude.Demo.FishingShop",
     "name": "Relatude FishingShop demosite",
     "description": "An e-commerce demo site using Relatude CMS and MVC",
