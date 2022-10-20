@@ -326,6 +326,9 @@ public Native_UIPlugInController(AdminUIAPIControllerContext ctx) : base(ctx) { 
 public class Native_OptimizingModuleController : WAF.Server.Controllers.ContentController<WAF.API.Native.OptimizingModule> { 
 public Native_OptimizingModuleController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
 }
+public class Native_ContentModuleBaseController : WAF.Server.Controllers.ContentController<WAF.API.Native.ContentModuleBase> { 
+public Native_ContentModuleBaseController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
+}
 public class RelatudeFishingShop_FrontPageController : WAF.Server.Controllers.ContentController<WAF.API.RelatudeFishingShop.FrontPage> { 
 public RelatudeFishingShop_FrontPageController(AdminUIAPIControllerContext ctx) : base(ctx) {    }
 }
