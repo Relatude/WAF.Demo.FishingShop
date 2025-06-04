@@ -18,7 +18,8 @@
                 "**/.git/**",
                 "**/WAF.Data/Temp/**",
                 "**/_cached_*",
-                "**/*.sln"
+                "**/*.sln",
+                "**/README.md"
             ]
         }]
     }]
