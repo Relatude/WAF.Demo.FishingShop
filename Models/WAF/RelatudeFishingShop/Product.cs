@@ -363,36 +363,6 @@ namespace WAF.Engine.Query.RelatudeFishingShop {
             }
         }
 
-        public static AqlPropertyFloat Currency1PriceExVat {
-            get {
-                return new AqlPropertyFloat(WAF.Data.Query.Native.SqlProductBase.Field.Currency1PriceExVat, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
-            }
-        }
-
-        public static AqlPropertyFloat Currency2PriceExVat {
-            get {
-                return new AqlPropertyFloat(WAF.Data.Query.Native.SqlProductBase.Field.Currency2PriceExVat, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
-            }
-        }
-
-        public static AqlPropertyFloat Currency3PriceExVat {
-            get {
-                return new AqlPropertyFloat(WAF.Data.Query.Native.SqlProductBase.Field.Currency3PriceExVat, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
-            }
-        }
-
-        public static AqlPropertyFloat Currency4PriceExVat {
-            get {
-                return new AqlPropertyFloat(WAF.Data.Query.Native.SqlProductBase.Field.Currency4PriceExVat, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
-            }
-        }
-
-        public static AqlPropertyFloat Currency5PriceExVat {
-            get {
-                return new AqlPropertyFloat(WAF.Data.Query.Native.SqlProductBase.Field.Currency5PriceExVat, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
-            }
-        }
-
         public static AqlPropertyRelation ProductDiscounts {
             get {
                 return new AqlPropertyRelation( WAFID.GetPropertyId("426899b5-a1f5-4694-8c3f-cd2bc4af99c2"), new AqlAliasRelation(new WAF.Engine.Query.Native.AqlAliasDiscountBase(), new WAF.Engine.Query.Native.AqlAliasProductBase(), WAF.Engine.Query.Native.AqlRelDiscountsApplicableToProducts.Relation));
@@ -450,6 +420,48 @@ namespace WAF.Engine.Query.RelatudeFishingShop {
         public static AqlPropertyBoolean UsesSimpleVariants {
             get {
                 return new AqlPropertyBoolean(WAF.Data.Query.Native.SqlProductBase.Field.UsesSimpleVariants, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
+            }
+        }
+
+        public static AqlPropertyRelation ProductLists {
+            get {
+                return new AqlPropertyRelation( WAFID.GetPropertyId("66af9102-0d77-4b90-bd2f-568f6ee3eaca"), new AqlAliasRelation(new WAF.Engine.Query.Native.AqlAliasProductList(), new WAF.Engine.Query.Native.AqlAliasProductBase(), WAF.Engine.Query.Native.AqlRelProductListsProducts.Relation));
+            }
+        }
+
+        public static AqlPropertyBoolean HasShortDescription {
+            get {
+                return new AqlPropertyBoolean(WAF.Data.Query.Native.SqlProductBase.Field.HasShortDescription, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
+            }
+        }
+
+        public static AqlPropertyBoolean HasDescription {
+            get {
+                return new AqlPropertyBoolean(WAF.Data.Query.Native.SqlProductBase.Field.HasDescription, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
+            }
+        }
+
+        public static AqlPropertyBoolean HasCategory {
+            get {
+                return new AqlPropertyBoolean(WAF.Data.Query.Native.SqlProductBase.Field.HasCategory, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
+            }
+        }
+
+        public static AqlPropertyBoolean HasManufacturer {
+            get {
+                return new AqlPropertyBoolean(WAF.Data.Query.Native.SqlProductBase.Field.HasManufacturer, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
+            }
+        }
+
+        public static AqlPropertyBoolean HasMainImage {
+            get {
+                return new AqlPropertyBoolean(WAF.Data.Query.Native.SqlProductBase.Field.HasMainImage, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
+            }
+        }
+
+        public static AqlPropertyBoolean HasMetaDescription {
+            get {
+                return new AqlPropertyBoolean(WAF.Data.Query.Native.SqlProductBase.Field.HasMetaDescription, WAFID.GetContentClassId("7b1c0f56-4bf7-4948-bc38-e85ed386fe72"));
             }
         }
 
